@@ -1,0 +1,11 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'application'
+
+mainClassName="org.gradle.HelloWordGradle"
+
+
+task myScriptTask(type:Exec)  {
+	workingDir 'src/main/resources'
+	commandLine 'cmd', '/c' , 'myScript.bat'
+}
